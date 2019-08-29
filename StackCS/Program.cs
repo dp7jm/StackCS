@@ -28,6 +28,7 @@ namespace StackCS
         }
         void Clear()
         {
+            _stack.Clear();
 
         }
     }
