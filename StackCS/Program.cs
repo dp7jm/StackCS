@@ -10,7 +10,7 @@ namespace StackCS
     class Stack
     {
         private ArrayList _stack = new ArrayList();
-        void Push(object obj)
+        public void Push(object obj)
         {
             if(obj == null)
             {
@@ -19,14 +19,14 @@ namespace StackCS
             this._stack.Add(obj);
 
         }
-        object Pop()
+        public object Pop()
         {
             object objectU = _stack[_stack.Count - 1];
             _stack.RemoveAt(_stack.Count - 1);
             return objectU;
 
         }
-        void Clear()
+        public void Clear()
         {
             _stack.Clear();
 
@@ -36,6 +36,16 @@ namespace StackCS
     {
         static void Main(string[] args)
         {
+            var stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.ReadKey();
+
+
         }
     }
 }
